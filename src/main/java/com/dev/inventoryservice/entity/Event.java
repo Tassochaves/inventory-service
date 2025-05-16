@@ -1,5 +1,7 @@
 package com.dev.inventoryservice.entity;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -23,6 +25,7 @@ public class Event {
     private String name;
     private Long totalCapacity;
     private Long leftCapacity;
+    private BigDecimal ticketPrice;
 
     @ManyToOne
     @JoinColumn(name = "venue_id")
